@@ -48,3 +48,5 @@ group :development do
 	gem 'better_errors'
 	gem 'spring'
 end
+
+gem 'haml-rails'
