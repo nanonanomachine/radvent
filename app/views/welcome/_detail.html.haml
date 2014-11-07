@@ -1,0 +1,8 @@
+- if advent_calendar_item.present?
+  %p.text-info.advent_calendar_author
+    = advent_calendar_item.user_name + "さん"
+  %p.advent_calendar_entry
+    = advent_calendar_item.comment
+- else
+  %div.advent_calendar_join
+    = link_to "参加登録", new_advent_calendar_item_path(date: date), class: "btn btn-success btn-block"

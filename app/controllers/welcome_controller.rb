@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
   	from_date = Date.new(2014, 12, 1).beginning_of_week(:sunday)
   	to_date = Date.new(2014, 12, 31).end_of_week(:sunday)
   	@calendar_data = split_week(from_date.upto(to_date))
+  	@advent_calendar_items =AdventCalendarItem.all
   end
 
   private
