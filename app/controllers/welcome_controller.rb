@@ -7,17 +7,17 @@ class WelcomeController < ApplicationController
   end
 
   private
-  def split_week(range)
-  	weeks = []
-  	week = []
-  		
-  	range.each do |date|
-  		week << date
-  		if date.wday == 6
-  			weeks << week
-  			week = []
-  		end
-  	end
-  	weeks << week
-  end
+	  def split_week(range)
+	  	weeks = []
+	  	week = []
+	  		
+	  	range.each do |date|
+	  		week << date
+	  		if date.wday == 6
+	  			weeks << week
+	  			week = []
+	  		end
+	  	end
+	  	weeks << week
+	  end
 end
