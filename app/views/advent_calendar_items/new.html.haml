@@ -1,0 +1,19 @@
+%nav.navbar.navbar-default{:role=>"navigation"}
+%div.container
+  %div.page-header
+    %h1 12/#{@advent_calendar_item.date}のAdventCalendarに参加登録しますか？
+    %hr
+  = form_for @advent_calendar_item do |f|
+    %fieldset
+      %div.form-group
+        = f.label :user_name, "お名前"
+        %div
+          = f.text_field :user_name, class:"form-control"
+      %div.form-group
+        = f.label :comment, "コメント(カレンダーに表示されます)"
+        %div
+          = f.text_area :comment, class:"form-control"
+      = f.hidden_field :date, value: @advent_calendar_item.date
+      %div
+        = link_to "キャンセル", welcome_index_path, class:"btn btn-default" 
+        = f.submit "登録する", class:"btn btn-primary"
