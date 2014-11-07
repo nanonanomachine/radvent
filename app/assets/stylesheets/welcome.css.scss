@@ -1,3 +1,31 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.advent_calendar_calendar{
+	border: none !important;
+	thead{
+		border: none !important;
+		tr{
+			border:none !important;
+			th{
+				border:none !important;
+			}
+		}
+	}
+	tbody{
+		td{
+			border: 1px solid #ddd;
+		    width: 14.2857142857%;
+		    height: 60px;
+		    border-color: #ddd !important;
+		    padding: 0 !important;
+		    .advent_calendar_date{
+				padding: 2px 10px;
+				background-color: #eee;
+				color: #999;
+				font-size: 16px;
+			}
+		}
+	}
+}

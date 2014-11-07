@@ -2,3 +2,24 @@
   %div.jumbotron
     %div.container
       %h1 Advent Calendar 2014
+
+%div.container
+  %table.table.table-bordered.advent_calendar_calendar
+    %thead
+      %tr
+        %th Sun
+        %th Mon
+        %th Tue
+        %th Wed
+        %th Thu
+        %th Fri
+        %th Sat
+    %tbody
+      - @calendar_data.each do |week|
+        %tr
+          - week.each do |date|
+            %td
+              %p.advent_calendar_date
+                = date.day
+
+
