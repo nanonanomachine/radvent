@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :items
+
   resources :advent_calendar_items
 
 

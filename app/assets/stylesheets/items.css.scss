@@ -1,0 +1,34 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-container{
+	padding-bottom: 50px;
+	.item-container{
+		display: table;
+		width: 100%;
+		border:1px solid #dce4ec;
+		border-radius: 3px;
+		.item-body{
+			display: table-cell;
+			width: 50%;
+			height: 518px;
+			textarea{
+				width: 100%;
+				height: 518px;
+				resize: none;
+				margin: 0;
+				padding: 10px;
+				border: none;
+				outline: 0;	
+			}
+		}
+		.item-preview{
+			display: table-cell;
+			width: 50%;
+			height: 518px;
+			background-color: #fff;
+			border-left:1px solid #dce4ec;
+		}	
+	}
+}
