@@ -4,8 +4,8 @@ class AdventCalendarItemsController < ApplicationController
 	end
 
 	def create
-		AdventCalendarItem.create(advent_calendar_item_params)
-		redirect_to welcome_index_path
+		advent_calendar_item = AdventCalendarItem.create(advent_calendar_item_params)
+		redirect_to new_item_path advent_calendar_item_id: advent_calendar_item.id
 	end
 
 	private 
