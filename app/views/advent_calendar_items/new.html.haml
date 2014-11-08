@@ -15,5 +15,5 @@
           = f.text_area :comment, class:"form-control"
       = f.hidden_field :date, value: @advent_calendar_item.date
       %div
-        = link_to "キャンセル", welcome_index_path, class:"btn btn-default" 
+        = link_to "キャンセル", root_path, class:"btn btn-default" 
         = f.submit "登録する", class:"btn btn-primary"
