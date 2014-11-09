@@ -2,7 +2,6 @@ class ItemsController < ApplicationController
 	def new
 		@date = params[:date]
 		@item = Item.new(advent_calendar_item_id: params[:id])
-		puts @item.advent_calendar_item_id
 	end
 
 	def create
