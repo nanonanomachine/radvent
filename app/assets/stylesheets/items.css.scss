@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//
+// Item new / edit
+//
 .form-container{
 	padding-bottom: 50px;
 	.item-container{
@@ -47,6 +50,27 @@
 	}
 }
 
+//
+// Item show
+//
+.item-show-header{
+	padding: 30px 15px !important;
+	.item-show-header-title{
+		margin-top: 0 !important;
+		font-size:34px !important;
+	}
+	.item-show-header-author{
+		margin-bottom:0;
+		color: #798389;
+	}
+}
+#item-show{
+	padding-bottom: 50px;
+}
+
+//
+// Markdown
+//
 .markdown{
 	font-size:15px;
 	h1{
