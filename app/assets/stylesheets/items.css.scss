@@ -43,3 +43,132 @@
 	}
 }
 
+.markdown{
+	font-size:15px;
+	h1{
+		padding-bottom: .3em;
+    	line-height: 1.2;
+    	border-bottom: 2px solid#dedede;
+    	font-size: 2.1em
+	}
+	h2{
+		padding-bottom: .3em;
+		line-height: 1.225;
+		border-bottom: 1px dotted#ccc;
+		font-size: 1.8em;
+	}
+	h3{
+		font-size: 1.5em;
+		line-height: 1.43;
+		margin-top: 1.4em;
+	}
+	h4{
+		margin-top: 1.3em;
+		font-size: 1.4em;
+	}
+	h5{
+		margin-top: 1.5em;
+		font-size: 1em;
+	}
+	h6{
+		margin-top: 1.5em;
+		font-size: 1em;
+		color: #777
+	}
+	blockquote{
+		color: #555;
+		font-size:1em;
+		border-left:solid 4px #ddd;
+		padding: .8em;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		margin-left: .8em;
+		h1, h2, h3, h4, h5, h6{
+			color: #555;
+		}
+	}
+	blockquote > *:first-child{
+		margin-top: 0;
+	}
+	a{
+		word-wrap: break-word;
+		word-break: break-all;
+	}
+	hr{
+		margin:1em 0;
+		border:0;
+		height:2px;
+		background-color:#ccc;
+	}
+	em{
+		font-family: "Helvetica Neue", Helvetica, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, sans-serif;
+		font-style: italic;
+	}
+	strong{
+		font-weight: 900;
+	}
+	b{
+		font-weight: 900;
+	}
+	ins{
+		font-weight: 900;
+	}
+	del{
+		text-decoration: line-through;
+	}
+	p{
+		word-wrap: break-word;
+		margin: 1em 0;
+		font-size: 1em;
+		line-height: 1.7;
+	}
+	img{
+		max-width: 50%;
+	}
+	dl{
+		margin: 1em 0;
+	}
+	dl dd{
+		margin-left: 2em;
+	}
+	table{
+		margin: 1em 0;
+		border-left: solid 1px #d9d9d9;
+		border-top: solid 1px #d9d9d9;
+	}
+	td, th{
+		border-bottom: solid 1px #ccc;
+	    border-right: solid 1px #ccc;
+	    padding: 8px 10px;
+	    word-wrap: break-word;
+	}
+	thead td, th{
+		font-weight: 900;
+		background-color: #fff;
+	}
+	tbody tr:nth-child(odd){
+		background-color: rgba(0, 0, 0, 0.03);
+	}
+	li p:first-child{
+		margin: 0;
+	}
+	ol,ul{
+		line-height: 1.7;
+	    margin-bottom: 1em;
+	    margin-top: 1em;
+	    padding-left: 1.5em;
+	}
+	ol > li {
+    	list-style-type: decimal;
+	}
+	ul > li{
+		list-style-type: disc;
+	}
+	li{
+		list-style-type: 0;
+	}
+	li > ol, li >ul{
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+}
