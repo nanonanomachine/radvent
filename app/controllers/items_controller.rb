@@ -5,8 +5,15 @@ class ItemsController < ApplicationController
 	end
 
 	def create
-		item = Item.create(item_params)
-		redirect_to advent_calendar_item_path(id: item.advent_calendar_item_id)
+		@item = Item.new(item_params)
+		 
+		if params[:preview_button]
+			render :preview
+		elsif !@item.save
+			render :new
+		else
+			redirect_to advent_calendar_item_path(id: @item.advent_calendar_item_id)
+		end
 	end
 
 	def show
@@ -24,6 +31,9 @@ class ItemsController < ApplicationController
 		else
 			render :edit
 		end
+	end
+
+	def preview
 	end
 
 	private
