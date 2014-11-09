@@ -22,5 +22,5 @@
               %p.advent-calendar-date
                 = date.day
               -if date.month == 12 && date.day < 26
-                = render "detail", advent_calendar_item: @advent_calendar_items.find_by(date: date.day), date: date.day
+                = render "detail", advent_calendar_item: @advent_calendar_items.find_by(date: date.day), date: date.day, today: @today
 
