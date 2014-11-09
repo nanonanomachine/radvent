@@ -20,11 +20,10 @@
 		.item-body{
 			display: table-cell;
 			width: 50%;
-			// height: 518px;
 			.item-body-content{
 				textarea{
 					width: 100%;
-					min-height: 440px;
+					min-height: 500px;
 					resize: none;
 					margin: 0;
 					padding: 10px;
@@ -36,9 +35,14 @@
 		.item-preview{
 			display: table-cell;
 			width: 50%;
-			min-height: 500px;
 			background-color: #fff;
 			border-left:1px solid #dce4ec;
+			height: 500px;
+			#item-preview-content{
+				height: 500px;
+				padding: 10px;
+				overflow: scroll;
+			}
 		}	
 	}
 }
@@ -172,3 +176,4 @@
 		margin-top: 0;
 	}
 }
+
