@@ -10,8 +10,8 @@ ready = ->
 		$('#item-preview-content').find('pre code').each (i, block) ->
 			hljs.highlightBlock(block);
 	parseBody = ->
-		$('#item-body').html(marked(text))
-		$('#item-body').find('pre code').each (i, block) ->
+		$('#item-show').html(marked(text))
+		$('#item-show').find('pre code').each (i, block) ->
 			hljs.highlightBlock(block);
 	checkTextChange = (e) ->
 		old = v = $(e).find('#item-text').val()
@@ -21,7 +21,7 @@ ready = ->
 				old = v
 				parseText(v)
 
-	parseBody() if $('#item-body')[0]
+	parseBody() if $('#item-show')[0]
 	parseText $('#item-text').val() if $('#item-text').val()
 	$(document).on 'keyup', '#item-text', checkTextChange(this)
 

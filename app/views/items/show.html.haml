@@ -1,10 +1,14 @@
 = javascript_tag do
   text = #{raw @item.body.to_json};
+%div.bs-doc-header
+  %div.jumbotron.item-show-header
+    %div.container
+      %h1.item-show-header-title
+        = @item.title
+      %p.item-show-header-author
+        = @item.advent_calendar_item.user_name + "さん"
+        %small
+          12月#{@item.advent_calendar_item.date}日
+
 %div.container
-  %div.page-header
-    %h1 
-      = @item.title
-    %p
-      = @item.advent_calendar_item.user_name + "さん"
-    %hr
-  %div#item-body
+  %div.markdown#item-show
