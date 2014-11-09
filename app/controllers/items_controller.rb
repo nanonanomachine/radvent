@@ -17,7 +17,9 @@ class ItemsController < ApplicationController
 	end
 
 	def show
+		today = Date.today
 		@item = Item.find(params[:id])
+		redirect_to root_path if today.month != "12" || @item.advent_calendar_item.date > today.day
 	end
 
 	def edit
