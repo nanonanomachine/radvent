@@ -1,0 +1,10 @@
+= javascript_tag do
+  text = #{raw @item.body.to_json};
+%div.container
+  %div.page-header
+    %h1 
+      = @item.title
+    %p
+      = @item.advent_calendar_item.user_name + "さん"
+    %hr
+  %div#item-body

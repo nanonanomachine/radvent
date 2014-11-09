@@ -5,7 +5,7 @@ class AdventCalendarItemsController < ApplicationController
 
 	def create
 		advent_calendar_item = AdventCalendarItem.create(advent_calendar_item_params)
-		redirect_to new_item_path advent_calendar_item_id: advent_calendar_item.id
+		redirect_to advent_calendar_item
 	end
 
 	def show
@@ -19,7 +19,7 @@ class AdventCalendarItemsController < ApplicationController
 	def update
 		@advent_calendar_item = AdventCalendarItem.find(params[:id])
 		if @advent_calendar_item.update(advent_calendar_item_params)
-			render :edit, id: params[:id], notice: '更新しました'
+			redirect_to @advent_calendar_item
 		else
 			render :edit
 		end

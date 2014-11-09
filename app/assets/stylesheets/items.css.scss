@@ -20,11 +20,11 @@
 		.item-body{
 			display: table-cell;
 			width: 50%;
-			height: 518px;
+			// height: 518px;
 			.item-body-content{
 				textarea{
 					width: 100%;
-					height: 518px;
+					min-height: 440px;
 					resize: none;
 					margin: 0;
 					padding: 10px;
@@ -36,7 +36,7 @@
 		.item-preview{
 			display: table-cell;
 			width: 50%;
-			height: 518px;
+			min-height: 500px;
 			background-color: #fff;
 			border-left:1px solid #dce4ec;
 		}	

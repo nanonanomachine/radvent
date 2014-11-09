@@ -4,8 +4,12 @@ class ItemsController < ApplicationController
 	end
 
 	def create
-		Item.create(item_params)
-		redirect_to root_path
+		item = Item.create(item_params)
+		redirect_to advent_calendar_item_path(id: item.advent_calendar_item_id)
+	end
+
+	def show
+		@item = Item.find(params[:id])
 	end
 
 	def edit
@@ -15,7 +19,7 @@ class ItemsController < ApplicationController
 	def update
 		@item = Item.find(params[:id])
 		if @item.update(item_params)
-			redirect_to root_path
+			redirect_to advent_calendar_item_path(id: @item.advent_calendar_item_id)
 		else
 			render :edit
 		end
