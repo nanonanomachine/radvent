@@ -3,18 +3,22 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 ready = ->
+	parseText = (text) ->
+		# parsing markdown to html
+		$('#item-preview-content').html(marked(text))
+		# highlighting
+		$('#item-preview-content').find('pre code').each (i, block) ->
+			hljs.highlightBlock(block);
+
 	checkTextChange = (e) ->
 		old = v = $(e).find('#item-text').val()
 		return ->
 			v = $(e).find('#item-text').val()
 			if old isnt v
 				old = v
-				# parsing markdown to html
-				$('#item-preview-content').html(marked(v))
-				# highlighting
-				$('#item-preview-content').find('pre code').each (i, block) ->
-					hljs.highlightBlock(block);
+				parseText(v)
 
+	parseText $('#item-text').val()
 	$(document).on 'keyup', '#item-text', checkTextChange(this)
 
 $(document).ready(ready)
