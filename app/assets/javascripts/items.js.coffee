@@ -21,7 +21,7 @@ ready = ->
 				old = v
 				parseText(v)
 
-	parseBody()
+	parseBody() if $('#item-body')[0]
 	parseText $('#item-text').val() if $('#item-text').val()
 	$(document).on 'keyup', '#item-text', checkTextChange(this)
 
