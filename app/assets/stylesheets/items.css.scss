@@ -73,6 +73,9 @@
 //
 .markdown{
 	font-size:15px;
+	>*:first-child{
+		margin-top:0!important
+	}
 	h1{
 		padding-bottom: .3em;
     	line-height: 1.2;

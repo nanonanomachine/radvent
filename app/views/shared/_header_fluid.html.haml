@@ -1,0 +1,5 @@
+%div.advent-calendar-breadcrumb
+  %div.container-fluid
+    = link_to "AdventCalendar", root_path
+    \/
+    = link_to "#{date}日目", advent_calendar_item_path(id: id)

@@ -1,5 +1,6 @@
 = javascript_tag do
   text = #{raw @item.body.to_json};
+= render 'shared/header', id: nil, date: @item.advent_calendar_item.date
 %div.bs-doc-header
   %div.jumbotron.item-show-header
     %div.container

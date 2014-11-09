@@ -1,4 +1,4 @@
-%nav.navbar.navbar-default{:role=>"navigation"}
+= render 'shared/header', id: @advent_calendar_item.id, date: @advent_calendar_item.date
 %div.container
   %div.page-header
     %h1 #{@advent_calendar_item.date}日目(12/#{@advent_calendar_item.date})のAdventCalendar情報編集
