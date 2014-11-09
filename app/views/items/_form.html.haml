@@ -1,0 +1,21 @@
+%div.form-container
+  = form_for item do |f|
+    %fieldset
+      %div.form-group
+        %div
+          = f.text_field :title, class:"form-control", placeholder:"タイトル"
+      %div.form-group
+        %div.row
+          %div.col-sm-12
+            %div.item-container
+              %div.item-body
+                %div.item-header.item-body-header Markdown
+                %div.item-body-content
+                  = f.text_area :body, id: "item-text", placeholder:"本文を入力してください"
+              %div.item-preview
+                %div.item-header.item-previw-header プレビュー
+                %div#item-preview-content
+      = f.hidden_field :advent_calendar_item_id, value: @item.advent_calendar_item_id
+      %div.pull-right
+        = link_to "キャンセル", root_path, class:"btn btn-default" 
+        = f.submit "登録する", class:"btn btn-primary"
