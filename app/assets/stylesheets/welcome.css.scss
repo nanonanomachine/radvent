@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.advent_calendar_calendar{
+.advent-calendar-calendar{
 	border: none !important;
 	thead{
 		border: none !important;
@@ -20,20 +20,20 @@
 		    height: 60px;
 		    border-color: #ddd !important;
 		    padding: 0 !important;
-		    .advent_calendar_date{
+		    .advent-calendar-date{
 				padding: 2px 10px;
 				background-color: #eee;
 				color: #999;
 				font-size: 16px;
 			}
-			.advent_calendar_join{
+			.advent-calendar-join{
 				margin: 0 10px 10px;
 			}
-			.advent_calendar_author{
+			.advent-calendar-author{
 				padding: 0 10px;
 				text-decoration: underline
 			}
-			.advent_calendar_entry{
+			.advent-calendar-entry{
 				padding: 0 10px;
 			}
 		}

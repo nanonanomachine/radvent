@@ -4,7 +4,7 @@
       %h1 Advent Calendar 2014
 
 %div.container
-  %table.table.table-bordered.advent_calendar_calendar
+  %table.table.table-bordered.advent-calendar-calendar
     %thead
       %tr
         %th 日
@@ -19,7 +19,7 @@
         %tr
           - week.each do |date|
             %td
-              %p.advent_calendar_date
+              %p.advent-calendar-date
                 = date.day
               -if date.month == 12 && date.day < 26
                 = render "detail", advent_calendar_item: @advent_calendar_items.find_by(date: date.day), date: date.day
