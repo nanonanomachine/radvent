@@ -1,0 +1,22 @@
+%nav.navbar.navbar-default{:role=>"navigation"}
+%div.container
+  %div.page-header
+    %h1 12/#{@advent_calendar_item.date}のAdventCalendar情報
+    %hr
+    %h3 お名前
+    = @advent_calendar_item.user_name + "さん"
+    %h3 コメント
+    = @advent_calendar_item.comment
+    %p.advent-calendar-item-link
+      = link_to "名前とコメントを編集する", edit_advent_calendar_item_path(id:@advent_calendar_item.id), class:"btn btn-success"
+  %div.page-header
+    %h2 記事の投稿
+    %hr
+    - if @advent_calendar_item.item
+      記事が登録されています
+      %p.advent-calendar-item-link
+        = link_to "投稿記事を編集する", edit_item_path(id:@advent_calendar_item.item.id), class:"btn btn-success"
+    - else
+      記事が投稿されていません
+      %p.advent-calendar-item-link
+        = link_to "記事を登録する", new_item_path(id: @advent_calendar_item.id), class:"btn btn-success"
