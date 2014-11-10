@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
   	to_date = Date.new(2014, 12, 31).end_of_week(:sunday)
   	@calendar_data = split_week(from_date.upto(to_date))
   	@advent_calendar_items =AdventCalendarItem.all
-  	@today = Date.today
+  	@today = Time.zone.today
   end
 
   private
