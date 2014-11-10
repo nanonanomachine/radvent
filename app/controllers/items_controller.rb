@@ -28,11 +28,15 @@ class ItemsController < ApplicationController
 
 	def update
 		@item = Item.find(params[:id])
-		if @item.update(item_params)
-			redirect_to advent_calendar_item_path(id: @item.advent_calendar_item_id)
-		else
-			render :edit
-		end
+		@item.assign_attributes(item_params)
+        
+        if params[:preview_button]
+        	render :preview
+        elsif !@item.save
+        	render :edit
+        else
+        	redirect_to advent_calendar_item_path(id: @item.advent_calendar_item_id)        	
+        end
 	end
 
 	def preview
