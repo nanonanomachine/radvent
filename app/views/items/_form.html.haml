@@ -19,6 +19,6 @@
       %div.pull-left
         = f.submit "プレビュー", name: "preview_button", class:"btn btn-success", formtarget:"_blank"
       %div.pull-right
-        = link_to "キャンセル", root_path, class:"btn btn-default" 
+        = link_to "キャンセル", advent_calendar_item_path(id: @item.advent_calendar_item_id), class:"btn btn-default" 
         = f.submit "登録する", class:"btn btn-primary"
         
