@@ -1,0 +1,12 @@
+%div.alert.alert-info.item-nav
+  %p.text-center
+    この投稿はAdvent Calendar 2014の#{date}日目の記事です。
+  %div.clearfix
+    %div.pull-left
+      - if advent_calendar_item_prev
+        #{advent_calendar_item_prev.date}日目:
+        = link_to advent_calendar_item_prev.item.title, item_path(advent_calendar_item_prev.item.id), class: "alert-link" 
+    %div.pull-right
+      - if advent_calendar_item_next
+        #{advent_calendar_item_next.date}日目:
+        = link_to advent_calendar_item_next.item.title, item_path(advent_calendar_item_next.item.id), class: "alert-link"         

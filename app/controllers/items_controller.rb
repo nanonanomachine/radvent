@@ -19,7 +19,12 @@ class ItemsController < ApplicationController
 	def show
 		today = Time.zone.today
 		@item = Item.find(params[:id])
-		redirect_to root_path if today.month != 12 || @item.advent_calendar_item.date > today.day
+		if today.month != 12 || @item.advent_calendar_item.date > today.day
+			redirect_to root_path 
+		else
+			@advent_calendar_item_prev = AdventCalendarItem.prev(@item.advent_calendar_item.date).first
+			@advent_calendar_item_next = AdventCalendarItem.next(@item.advent_calendar_item.date).first
+		end
 	end
 
 	def edit

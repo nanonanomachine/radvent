@@ -55,6 +55,7 @@
 //
 .item-show-header{
 	padding: 30px 15px !important;
+	margin-bottom: 20px !important;
 	.item-show-header-title{
 		margin-top: 0 !important;
 		font-size:34px !important;
@@ -64,8 +65,10 @@
 		color: #798389;
 	}
 }
-#item-show{
-	padding-bottom: 50px;
+
+.item-nav{
+	font-size: 13px;
+	padding: 10px !important;
 }
 
 //
