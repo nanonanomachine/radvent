@@ -2,6 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//
+// Description
+//
+.advent-calendar-description{
+	hr{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	p{
+		margin-bottom: 51px;
+		padding-top: 5px
+	}
+}
+
+//
+// Calendar
+//
 .advent-calendar-calendar{
 	border: none !important;
 	thead{
