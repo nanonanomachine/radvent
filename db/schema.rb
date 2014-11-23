@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141108104223) do
+ActiveRecord::Schema.define(version: 20141123140329) do
 
   create_table "advent_calendar_items", force: true do |t|
     t.string   "user_name"
@@ -28,5 +28,7 @@ ActiveRecord::Schema.define(version: 20141108104223) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "items", ["advent_calendar_item_id"], name: "index_items_on_advent_calendar_item_id", unique: true
 
 end
