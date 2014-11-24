@@ -71,6 +71,20 @@
 	padding: 10px !important;
 }
 
+.comments{
+	margin-bottom: 40px;
+	.comment-title{
+		padding-top: 12px;
+		padding-bottom: 12px;
+		font-weight: bold;
+	}
+	hr{
+		margin: 0;
+		margin-bottom: 21px;
+		border-top: 2px solid #ccc;
+	}
+}
+
 //
 // Markdown
 //
