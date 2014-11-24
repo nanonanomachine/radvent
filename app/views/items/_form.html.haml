@@ -15,10 +15,10 @@
               %div.item-preview
                 %div.item-header.item-previw-header プレビュー
                 %div.markdown#item-preview-content
-      = f.hidden_field :advent_calendar_item_id, value: @item.advent_calendar_item_id
+      = f.hidden_field :advent_calendar_item_id, value: item.advent_calendar_item_id
       %div.pull-left
         = f.submit "プレビュー", name: "preview_button", class:"btn btn-success", formtarget:"_blank"
       %div.pull-right
-        = link_to "キャンセル", advent_calendar_item_path(id: @item.advent_calendar_item_id), class:"btn btn-default" 
+        = link_to "キャンセル", advent_calendar_item_path(id: item.advent_calendar_item_id), class:"btn btn-default" 
         = f.submit "登録する", class:"btn btn-primary"
         
