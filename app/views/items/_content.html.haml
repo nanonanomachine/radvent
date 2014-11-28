@@ -9,8 +9,8 @@
           12月#{item.advent_calendar_item.date}日
 
 %div.container
-  = render "navigation", date: item.advent_calendar_item.date, advent_calendar_item_prev: advent_calendar_item_prev, advent_calendar_item_next: advent_calendar_item_next  
+  = render "navigation", today: today, date: item.advent_calendar_item.date, advent_calendar_item_prev: advent_calendar_item_prev, advent_calendar_item_next: advent_calendar_item_next  
   %div.markdown#item-show
-  = render "navigation", date: item.advent_calendar_item.date, advent_calendar_item_prev: advent_calendar_item_prev, advent_calendar_item_next: advent_calendar_item_next 
+  = render "navigation", today: today, date: item.advent_calendar_item.date, advent_calendar_item_prev: advent_calendar_item_prev, advent_calendar_item_next: advent_calendar_item_next 
 = javascript_tag do
   text = #{raw item.body.to_json};

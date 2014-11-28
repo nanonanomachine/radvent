@@ -17,9 +17,9 @@ class ItemsController < ApplicationController
 	end
 
 	def show
-		today = Time.zone.today
+		@today = Time.zone.today
 		@item = Item.find(params[:id])
-		if today.month != 12 || @item.advent_calendar_item.date > today.day
+		if @today.month != 12 || @item.advent_calendar_item.date > @today.day
 			redirect_to root_path 
 		else
 			@comment = Comment.new(item_id: @item.id)

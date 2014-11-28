@@ -7,6 +7,6 @@
         #{advent_calendar_item_prev.date}日目:
         = link_to advent_calendar_item_prev.item.title, item_path(advent_calendar_item_prev.item.id), class: "alert-link" 
     %div.pull-right
-      - if advent_calendar_item_next
+      - if advent_calendar_item_next && advent_calendar_item_next.date <= today.day
         #{advent_calendar_item_next.date}日目:
         = link_to advent_calendar_item_next.item.title, item_path(advent_calendar_item_next.item.id), class: "alert-link"         

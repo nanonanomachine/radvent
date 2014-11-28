@@ -1,5 +1,5 @@
 = render "shared/header", id: nil, date: @item.advent_calendar_item.date
-= render "content", item: @item, advent_calendar_item_prev: @advent_calendar_item_prev, advent_calendar_item_next: @advent_calendar_item_next
+= render "content", today: @today, item: @item, advent_calendar_item_prev: @advent_calendar_item_prev, advent_calendar_item_next: @advent_calendar_item_next
 %div.container.comments
   %div.comment-title コメント
   %hr
