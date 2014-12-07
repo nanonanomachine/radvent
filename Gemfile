@@ -52,3 +52,5 @@ end
 gem 'haml-rails'
 
 gem 'marked-rails'
+
+gem 'carrierwave'
