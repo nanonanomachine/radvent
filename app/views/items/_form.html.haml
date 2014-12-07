@@ -12,6 +12,7 @@
                 %div.item-header.item-body-header Markdown
                 %div.item-body-content
                   = f.text_area :body, id: "item-text", placeholder:"本文を入力してください"
+                  = render "form_attachment", attachment: attachment
               %div.item-preview
                 %div.item-header.item-previw-header プレビュー
                 %div.markdown#item-preview-content
@@ -21,4 +22,3 @@
       %div.pull-right
         = link_to "キャンセル", advent_calendar_item_path(id: item.advent_calendar_item_id), class:"btn btn-default" 
         = f.submit "登録する", class:"btn btn-primary"
-        
