@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :advent_calendar_items
+  resources :attachments
   resources :comments
 
   # The priority is based upon order of creation: first created -> highest priority.
