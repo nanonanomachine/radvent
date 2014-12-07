@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
 	def new
 		@date = params[:date]
 		@item = Item.new(advent_calendar_item_id: params[:id])
+		@attachment = Attachment.new(advent_calendar_item_id: params[:id])
 	end
 
 	def create
@@ -30,6 +31,7 @@ class ItemsController < ApplicationController
 
 	def edit
 		@item = Item.find(params[:id])
+		@attachment = Attachment.new(advent_calendar_item_id: @item.advent_calendar_item_id)
 	end
 
 	def update

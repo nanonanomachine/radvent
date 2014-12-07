@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141123144821) do
+ActiveRecord::Schema.define(version: 20141125152431) do
 
   create_table "advent_calendar_items", force: true do |t|
     t.string   "user_name"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20141123144821) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "attachments", force: true do |t|
+    t.integer  "advent_calendar_item_id"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "attachments", ["advent_calendar_item_id"], name: "index_attachments_on_advent_calendar_item_id"
 
   create_table "comments", force: true do |t|
     t.integer  "item_id"

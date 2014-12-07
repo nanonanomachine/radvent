@@ -33,6 +33,28 @@
 					border: none;
 					outline: 0;	
 				}
+				.attachment-image{
+					box-sizing: border-box;
+					border-top-right-radius: 3px;
+					border-top-left-radius: 3px;
+					border-bottom-right-radius: 3px;
+					border-bottom-left-radius: 3px;
+					position: relative;
+					background-color: #eee;
+					text-align: center;
+					font-size: 13px;
+					color: #999;
+					margin: 10px;
+					padding: 10px 0;
+					#attachment-image-select{
+						position: absolute;
+						top: 8px;
+						left: 50%;
+						opacity: .0001;
+						cursor: pointer;
+						margin-left: -120px;
+					}
+				}
 			}
 		}
 		.item-preview{
