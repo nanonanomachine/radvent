@@ -38,7 +38,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# Use thiin instead of WEBrick
+# Use thin instead of WEBrick
 gem 'thin'
 
 group :development do
