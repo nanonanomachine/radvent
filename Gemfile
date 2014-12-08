@@ -46,7 +46,6 @@ group :development do
 	gem 'quiet_assets'
 	gem 'tapp'
 	gem 'better_errors'
-	gem 'spring'
 end
 
 gem 'haml-rails'
