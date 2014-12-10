@@ -1,13 +1,20 @@
 %div.bs-doc-header
   %div.jumbotron.item-show-header
     %div.container
-      %h1.item-show-header-title
-        = item.title
-      %p.item-show-header-author
-        = item.advent_calendar_item.user_name + "さん"
-        %small
-          12月#{item.advent_calendar_item.date}日
-
+      %div.row
+        %div.col-sm-10
+          %h1.item-show-header-title
+            = item.title
+          %p.item-show-header-author
+            = item.advent_calendar_item.user_name + "さん"
+          %small
+            12月#{item.advent_calendar_item.date}日
+        %div.col-sm-2
+          %div.item-show-header-comment-count
+            %i.fa.fa-comment-o
+            = item.comments.count
+            %div.item-show-header-comment-count-text
+              コメント
 %div.container
   = render "navigation", today: today, date: item.advent_calendar_item.date, advent_calendar_item_prev: advent_calendar_item_prev, advent_calendar_item_next: advent_calendar_item_next  
   %div.markdown#item-show
