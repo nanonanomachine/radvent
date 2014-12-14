@@ -85,6 +85,10 @@
 	.item-show-header-author{
 		margin-bottom:0;
 		color: #798389;
+		.item-show-header-edit a{
+			font-size: 15px;
+			color: #798389;
+		}
 	}
 	.item-show-header-comment-count{
 		text-align:center;
