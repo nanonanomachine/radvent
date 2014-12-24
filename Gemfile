@@ -48,6 +48,11 @@ group :development do
 	gem 'better_errors'
 end
 
+group :test do 
+	gem "rspec-rails", '~> 3.0'
+	gem "factory_girl_rails", "~> 4.5.0"
+end
+
 gem 'haml-rails'
 
 gem 'marked-rails'
