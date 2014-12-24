@@ -9,8 +9,9 @@
             = item.advent_calendar_item.user_name + "さん"
             %small
               12月#{item.advent_calendar_item.date}日
-            %span.item-show-header-edit
-              = link_to "記事を編集する", edit_item_path(id:item.id)
+            - if item.id
+              %span.item-show-header-edit
+                = link_to "記事を編集する", edit_item_path(item)
         %div.col-sm-2
           %div.item-show-header-comment-count
             %i.fa.fa-comment-o
