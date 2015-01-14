@@ -19,6 +19,6 @@ class WelcomeController < ApplicationController
   			week = []
   		end
   	end
-  	weeks << week
+    weeks
   end
 end
