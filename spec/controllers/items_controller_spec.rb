@@ -3,14 +3,13 @@ require 'rails_helper'
 RSpec.describe ItemsController, :type => :controller do
 	describe "GET #show" do
 		before :each do
-			today = Date.new(2014, 12, 2)
+			today = Date.new(2015, 12, 2)
 			allow(Time.zone).to receive(:today).and_return(today)
 		end
 
 		it "redirects to root if requested item's date doesn't come yet" do
-			# Expected to fail, need to fix controller code
 			item = create(:advent_calendar_item, date: 2).item
-			today = Date.new(2013, 12, 3)
+			today = Date.new(2014, 12, 3)
 			allow(Time.zone).to receive(:today).and_return(today)
 			get :show, id: item
 			expect(response).to redirect_to root_path
@@ -49,9 +48,8 @@ RSpec.describe ItemsController, :type => :controller do
 		end
 
 		it "renders the :show template if item's date is passed" do
-			# Expected to fail, need to fix controller code
 			item = create(:advent_calendar_item, date: 1).item
-			today = Date.new(2015, 11, 2)
+			today = Date.new(2016, 11, 2)
 			allow(Time.zone).to receive(:today).and_return(today)
 			get :show, id: item
 			expect(response).to render_template :show

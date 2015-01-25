@@ -18,10 +18,9 @@ class ItemsController < ApplicationController
 	end
 
 	def show
-		@today = Time.zone.today
 		@item = Item.find(params[:id])
-		if @today.month != 12 || @item.advent_calendar_item.date > @today.day
-			redirect_to root_path 
+		if !@item.advent_calendar_item.published?
+			redirect_to root_path
 		else
 			@comment = Comment.new(item_id: @item.id)
 			@advent_calendar_item_prev = AdventCalendarItem.prev(@item.advent_calendar_item.date).first
