@@ -21,27 +21,27 @@ RSpec.describe ItemsController, :type => :controller do
 			expect(assigns(:item)).to eq item
 		end
 
-		it "assigns previous AdventCalendarItem to @advent_calendar_item_prev" do
+		it "assigns previous advent_calendar_item to @advent_calendar_item_prev" do
 			advent_calendar_item_prev = create(:advent_calendar_item, date: 1)
 			item = create(:advent_calendar_item, date: 2).item
 			get :show, id: item
 			expect(assigns(:advent_calendar_item_prev)).to eq advent_calendar_item_prev
 		end
 
-		it "assigns nil to @advent_calendar_item_prev if previous AdventCalendarItem is not exist" do
+		it "assigns nil to @advent_calendar_item_prev if previous advent_calendar_item is not exist" do
 			item = create(:advent_calendar_item, date: 2).item
 			get :show, id: item
 			expect(assigns(:advent_calendar_item_prev)).to be_nil
 		end
 
-		it "assigns next AdventCalendarItem to @advent_calendar_item_next" do
+		it "assigns next advent_calendar_item to @advent_calendar_item_next" do
 			advent_calendar_item_next = create(:advent_calendar_item, date:2)
 			item = create(:advent_calendar_item, date: 1).item
 			get :show, id: item
 			expect(assigns(:advent_calendar_item_next)).to eq advent_calendar_item_next
 		end
 
-		it "assigns nil to @advent_calendar_item_next if next AdventCalendarItem is not exist" do
+		it "assigns nil to @advent_calendar_item_next if next advent_calendar_item is not exist" do
 			item = create(:advent_calendar_item, date: 1).item
 			get :show, id: item
 			expect(assigns(:advent_calendar_item_next)).to be_nil
@@ -62,7 +62,7 @@ RSpec.describe ItemsController, :type => :controller do
 			expect(assigns(:date)).to eq "1"
 		end
 
-		it "assigns a new Item to @item" do
+		it "assigns a new item to @item" do
 			get :new
 			expect(assigns(:item)).to be_a_new(Item)
 		end
@@ -72,7 +72,7 @@ RSpec.describe ItemsController, :type => :controller do
 			expect(assigns(:item).advent_calendar_item_id).to eq 1
 		end
 
-		it "assigns a new Attachment to @attachment" do
+		it "assigns a new attachment to @attachment" do
 			get :new
 			expect(assigns(:attachment)).to be_a_new(Attachment)
 		end

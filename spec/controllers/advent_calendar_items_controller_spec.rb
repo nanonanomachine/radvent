@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe AdventCalendarItemsController, :type => :controller do
 	describe "GET #show" do
-		it "assigns the requested advent_calendar_item to  @advent_calendar_item" do
+		it "assigns the requested advent_calendar_item to @advent_calendar_item" do
 			advent_calendar_item = create(:advent_calendar_item)
 			get :show, id: advent_calendar_item
 			expect(assigns(:advent_calendar_item)).to eq advent_calendar_item
@@ -16,7 +16,7 @@ RSpec.describe AdventCalendarItemsController, :type => :controller do
 	end
 
 	describe "GET #new" do
-		it "assigns a new AdvnetCalendarItem to @advent_calendar_item" do
+		it "assigns a new advent_calendar_item to @advent_calendar_item" do
 			get :new, date: 1
 			expect(assigns(:advent_calendar_item)).to be_a_new(AdventCalendarItem)
 		end
