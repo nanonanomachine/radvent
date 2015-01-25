@@ -1,7 +1,7 @@
 %div
   %div.jumbotron
     %div.container
-      %h1 Advent Calendar 2014
+      %h1 Advent Calendar #{Constants::YEAR}
 
 %div.container
   %div.advent-calendar-description
@@ -25,8 +25,8 @@
             %td
               %p.advent-calendar-date
                 = date.day
-              -if date.month == 12 && date.day < 26
-                = render "detail", advent_calendar_item: @advent_calendar_items.find_by(date: date.day), date: date.day, today: @today
+              -if advent_calendar_date?(date)
+                = render "detail", advent_calendar_item: @advent_calendar_items.find_by(date: date.day), date: date.day
 
 %footer.welcome-footer
   %div.container

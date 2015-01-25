@@ -19,11 +19,6 @@ describe WelcomeController, :type => :controller do
 			expect(assigns(:advent_calendar_items)).to match_array([first, second])
 		end
 
-		it 'assigns today' do
-			get :index
-			expect(assigns(:today)).to eq Time.zone.today
-		end
-
 		it 'renders the :index template' do
 			 get :index
 			 expect(response).to render_template :index

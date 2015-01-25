@@ -1,15 +1,9 @@
 - if advent_calendar_item.present?
   %p.text-info.advent-calendar-author
     = advent_calendar_item.user_name + "さん"
-  - if today.month == 12 && date <= today.day
-    - if advent_calendar_item.item
-      %p.text-info.advent-calendar-entry
-        = link_to advent_calendar_item.item.title, item_path(advent_calendar_item.item.id) 
-    - else
-      %p.advent-calendar-entry
-        = advent_calendar_item.comment
-      %p.advent-calendar-join
-        = link_to "編集", advent_calendar_item_path(id:advent_calendar_item.id), class:"btn btn-default btn-block btn-xs"
+  - if advent_calendar_item.published?
+    %p.text-info.advent-calendar-entry
+      = link_to advent_calendar_item.item.title, item_path(advent_calendar_item.item.id) 
   - else
     %p.advent-calendar-entry
       = advent_calendar_item.comment
