@@ -1,7 +1,7 @@
 = render 'shared/header', id: @advent_calendar_item.id, date: @advent_calendar_item.date
 %div.container
   %div.page-header
-    %h1 #{@advent_calendar_item.date}日目(12/#{@advent_calendar_item.date})のAdventCalendar情報
+    %h1 #{@advent_calendar_item.date}日目(#{Constants::MONTH}/#{@advent_calendar_item.date})のAdventCalendar情報
     %hr
     %h3 お名前
     = @advent_calendar_item.user_name + "さん"

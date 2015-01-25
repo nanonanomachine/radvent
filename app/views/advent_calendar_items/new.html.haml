@@ -1,6 +1,6 @@
 %div.container
   %div.page-header
-    %h1 #{@advent_calendar_item.date}日目(12/#{@advent_calendar_item.date})のAdventCalendarに参加登録しますか？
+    %h1 #{@advent_calendar_item.date}日目(#{Constants::MONTH}/#{@advent_calendar_item.date})のAdventCalendarに参加登録しますか？
     %hr
   = form_for @advent_calendar_item do |f|
     %fieldset
