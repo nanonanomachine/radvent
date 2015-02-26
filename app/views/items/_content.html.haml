@@ -6,21 +6,21 @@
           %h1.item-show-header-title
             = item.title
           %p.item-show-header-author
-            = item.advent_calendar_item.user_name + "さん"
+            = item.advent_calendar_item.user_name + t("views.courtesy_title")
             %small
-              #{Constants::MONTH}月#{item.advent_calendar_item.date}日
+              #{t "views.items._content.date_short", month: Constants::MONTH, day: item.advent_calendar_item.date}
             - if item.id
               %span.item-show-header-edit
-                = link_to "記事を編集する", edit_item_path(item)
+                = link_to t("views.items._content.link_edit"), edit_item_path(item)
         %div.col-sm-2
           %div.item-show-header-comment-count
             %i.fa.fa-comment-o
             = item.comments.count
             %div.item-show-header-comment-count-text
-              コメント
+              #{t "activerecord.models.comment"}
 %div.container
-  = render "navigation", date: item.advent_calendar_item.date, advent_calendar_item_prev: advent_calendar_item_prev, advent_calendar_item_next: advent_calendar_item_next  
+  = render "navigation", date: item.advent_calendar_item.date, advent_calendar_item_prev: advent_calendar_item_prev, advent_calendar_item_next: advent_calendar_item_next
   %div.markdown#item-show
-  = render "navigation", date: item.advent_calendar_item.date, advent_calendar_item_prev: advent_calendar_item_prev, advent_calendar_item_next: advent_calendar_item_next 
+  = render "navigation", date: item.advent_calendar_item.date, advent_calendar_item_prev: advent_calendar_item_prev, advent_calendar_item_next: advent_calendar_item_next
 = javascript_tag do
   text = #{raw item.body.to_json};

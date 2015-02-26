@@ -1,18 +1,18 @@
 %div.container
   %div.page-header
-    %h1 #{@advent_calendar_item.date}日目(#{Constants::MONTH}/#{@advent_calendar_item.date})のAdventCalendarに参加登録しますか？
+    %h1 #{t "views.advent_calendar_items.new.title", date: @advent_calendar_item.date, month: Constants::MONTH}
     %hr
   = form_for @advent_calendar_item do |f|
     %fieldset
       %div.form-group
-        = f.label :user_name, "お名前"
+        = f.label :user_name, t("activerecord.attributes.advent_calendar_item.user_name")
         %div
           = f.text_field :user_name, class:"form-control"
       %div.form-group
-        = f.label :comment, "コメント(カレンダーに表示されます)"
+        = f.label :comment, t("views.advent_calendar_items.comment")
         %div
           = f.text_area :comment, class:"form-control"
       = f.hidden_field :date, value: @advent_calendar_item.date
       %div
-        = link_to "キャンセル", root_path, class:"btn btn-default" 
-        = f.submit "登録する", class:"btn btn-primary"
+        = link_to t("helpers.submit.cancel"), root_path, class:"btn btn-default"
+        = f.submit t("helpers.submit.create"), class:"btn btn-primary"

@@ -3,6 +3,6 @@
     = link_to "AdventCalendar", root_path
     \/
     - if id
-      = link_to "#{date}日目", advent_calendar_item_path(id: id)
+      = link_to t("views.day_format", date: date), advent_calendar_item_path(id: id)
     - else
-      #{date}日目
+      #{t "views.day_format", date: date}

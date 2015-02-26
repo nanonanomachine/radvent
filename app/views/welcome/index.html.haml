@@ -5,19 +5,14 @@
 
 %div.container
   %div.advent-calendar-description
-    %h2 AdventCalendarとは
+    %h2 #{t "views.welcome.index.description_title"}
     %hr
-    %p クリスマスまでの期間をより楽しく過ごすため、12月1日から25日まで1日に1つ、みんなで記事を投稿するイベントです。
+    %p #{t "views.welcome.index.description"}
   %table.table.table-bordered.advent-calendar-calendar
     %thead
       %tr
-        %th 日
-        %th 月
-        %th 火
-        %th 水
-        %th 木
-        %th 金
-        %th 土
+        - t("date.abbr_day_names").each do |day_name|
+          %th #{day_name}
     %tbody
       - @calendar_data.each do |week|
         %tr

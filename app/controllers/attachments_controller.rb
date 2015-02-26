@@ -3,7 +3,7 @@ class AttachmentsController < ApplicationController
 
 	def create
 		attachment = Attachment.new(attachment_params)
-		
+
 		if attachment.save
 			render json: {
 				image_name: attachment.image.identifier,
@@ -11,13 +11,13 @@ class AttachmentsController < ApplicationController
 			}
 		else
 			render json: {
-				image_name: '画像のアップロードに失敗しました',
+				image_name: t("controllers.attachments.create.fail_upload"),
 				image_url: nil
 			}
 		end
 	end
 
-	private 
+	private
 	def attachment_params
 		params.require(:attachment).permit(:image, :advent_calendar_item_id)
 	end

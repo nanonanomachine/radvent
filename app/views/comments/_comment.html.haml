@@ -2,10 +2,10 @@
   %div.comment-header
     %div.text-info.comment-user
       = comment.user_name
-      さん
+      #{t "views.courtesy_title"}
     %div.pull-right.comment-metadata
       %div.text-muted
         = comment.created_at.to_s
-        = link_to "削除", comment_path(comment), method: :delete, data: { confirm: "コメントを削除しますか?" }, class:"text-muted"
+        = link_to t("helpers.button.delete"), comment_path(comment), method: :delete, data: { confirm: t("views.comments._comment.confirm_delete") }, class:"text-muted"
   %div.comment-content
     = simple_format(h(comment.body))

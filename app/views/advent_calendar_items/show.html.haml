@@ -1,22 +1,24 @@
 = render 'shared/header', id: @advent_calendar_item.id, date: @advent_calendar_item.date
 %div.container
   %div.page-header
-    %h1 #{@advent_calendar_item.date}日目(#{Constants::MONTH}/#{@advent_calendar_item.date})のAdventCalendar情報
+    %h1 #{t "views.advent_calendar_items.show.title", date: @advent_calendar_item.date, month: Constants::MONTH}
     %hr
-    %h3 お名前
-    = @advent_calendar_item.user_name + "さん"
-    %h3 コメント
+    %h3 #{t "activerecord.attributes.advent_calendar_item.user_name"}
+    = @advent_calendar_item.user_name + t("views.courtesy_title")
+    %h3 #{t "activerecord.attributes.advent_calendar_item.comment"}
     = @advent_calendar_item.comment
     %p.advent-calendar-item-link
-      = link_to "名前とコメントを編集する", edit_advent_calendar_item_path(id:@advent_calendar_item.id), class:"btn btn-success"
+      = link_to t("views.advent_calendar_items.show.button_edit_advent_calendar_item"),
+        edit_advent_calendar_item_path(id:@advent_calendar_item.id), class:"btn btn-success"
   %div.page-header
-    %h2 記事の投稿
+    %h2 #{t "views.advent_calendar_items.show.item_title"}
     %hr
     - if @advent_calendar_item.item
-      記事が登録されています
+      #{t "views.advent_calendar_items.show.item_created"}
       %p.advent-calendar-item-link
-        = link_to "投稿記事を編集する", edit_item_path(id:@advent_calendar_item.item.id), class:"btn btn-success"
+        = link_to t("views.advent_calendar_items.show.button_edit_item"),
+          edit_item_path(id:@advent_calendar_item.item.id), class:"btn btn-success"
     - else
-      記事が投稿されていません
+      #{t "views.advent_calendar_items.show.item_not_created"}
       %p.advent-calendar-item-link
-        = link_to "記事を登録する", new_item_path(id: @advent_calendar_item.id, date: @advent_calendar_item.date), class:"btn btn-success"
+        = link_to t("views.advent_calendar_items.show.button_create_item"), new_item_path(id: @advent_calendar_item.id, date: @advent_calendar_item.date), class:"btn btn-success"

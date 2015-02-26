@@ -1,5 +1,5 @@
 = form_for attachment, remote: true do |a|
   %div.attachment-image
     = a.file_field :image, id: "attachment-image-select"
-    画像を選択
+    #{t "views.items._form_attachment.select_image"}
     = a.hidden_field :advent_calendar_item_id, value: attachment.advent_calendar_item_id, id: "attachment-advent-calendar-id"

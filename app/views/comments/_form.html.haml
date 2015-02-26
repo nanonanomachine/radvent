@@ -1,13 +1,13 @@
 %div.comment-form
   = form_for comment do |f|
     %fieldset
-      %legend コメントを投稿する
+      %legend #{t "views.comments._form.title"}
       %div.form-group
         %div
-          = f.text_field :user_name, class:"form-control", placeholder:"お名前を入力してください"
+          = f.text_field :user_name, class:"form-control", placeholder:t("helpers.placeholder.name")
       %div.form-group
         %div
-          = f.text_area :body, class:"form-control", placeholder:"コメントを入力してください"
+          = f.text_area :body, class:"form-control", placeholder:t("helpers.placeholder.comment")
       = f.hidden_field :item_id, value: comment.item_id
       %div.pull-right
-        = f.submit "投稿する", class:"btn btn-sm btn-primary"
+        = f.submit t("views.comments._form.button_create"), class:"btn btn-sm btn-primary"

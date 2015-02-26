@@ -1,14 +1,18 @@
 - if advent_calendar_item.present?
   %p.text-info.advent-calendar-author
-    = advent_calendar_item.user_name + "さん"
+    = advent_calendar_item.user_name + t("views.courtesy_title")
   - if advent_calendar_item.published?
     %p.text-info.advent-calendar-entry
-      = link_to advent_calendar_item.item.title, item_path(advent_calendar_item.item.id) 
+      = link_to advent_calendar_item.item.title, item_path(advent_calendar_item.item.id)
   - else
     %p.advent-calendar-entry
       = advent_calendar_item.comment
     %p.advent-calendar-join
-      = link_to "編集", advent_calendar_item_path(id:advent_calendar_item.id), class:"btn btn-default btn-block btn-xs"
+      = link_to t("views.welcome._detail.button_edit"),
+        advent_calendar_item_path(id:advent_calendar_item.id),
+        class:"btn btn-default btn-block btn-xs"
 - else
   %div.advent-calendar-join
-    = link_to "参加登録", new_advent_calendar_item_path(date: date), class: "btn btn-success btn-block"
+    = link_to t("views.welcome._detail.button_create"),
+      new_advent_calendar_item_path(date: date),
+      class: "btn btn-success btn-block"

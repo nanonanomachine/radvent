@@ -1,5 +1,5 @@
 = render "shared/header_fluid", id: @item.advent_calendar_item_id, date: @item.advent_calendar_item.date
 %div.container-fluid
-  %h2 AdventCalendar記事編集
+  %h2 #{t "views.items.edit.title"}
   %hr
   = render "form", item: @item, attachment: @attachment

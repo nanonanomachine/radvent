@@ -3,7 +3,7 @@
     %fieldset
       %div.form-group
         %div
-          = f.text_field :title, class:"form-control", placeholder:"タイトル"
+          = f.text_field :title, class:"form-control", placeholder:t("activerecord.attributes.item.title")
       %div.form-group
         %div.row
           %div.col-sm-12
@@ -11,14 +11,14 @@
               %div.item-body
                 %div.item-header.item-body-header Markdown
                 %div.item-body-content
-                  = f.text_area :body, id: "item-text", placeholder:"本文を入力してください"
+                  = f.text_area :body, id: "item-text", placeholder:t("helpers.placeholder.text")
                   = render "form_attachment", attachment: attachment
               %div.item-preview
-                %div.item-header.item-previw-header プレビュー
+                %div.item-header.item-previw-header #{t "views.items._form.item_header_preview"}
                 %div.markdown#item-preview-content
       = f.hidden_field :advent_calendar_item_id, value: item.advent_calendar_item_id
       %div.pull-left
-        = f.submit "プレビュー", name: "preview_button", class:"btn btn-success", formtarget:"_blank"
+        = f.submit t("helpers.submit.preview"), name: "preview_button", class:"btn btn-success", formtarget:"_blank"
       %div.pull-right
-        = link_to "キャンセル", advent_calendar_item_path(id: item.advent_calendar_item_id), class:"btn btn-default" 
-        = f.submit "登録する", class:"btn btn-primary"
+        = link_to t("helpers.submit.cancel"), advent_calendar_item_path(id: item.advent_calendar_item_id), class:"btn btn-default"
+        = f.submit t("helpers.submit.create"), class:"btn btn-primary"
