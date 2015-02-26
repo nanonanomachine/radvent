@@ -1,23 +1,86 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  date:
+    abbr_day_names:
+    - Sun
+    - Mon
+    - Tue
+    - Wed
+    - Thu
+    - Fri
+    - Sat
+  helpers:
+    submit:
+      create: Create
+      submit: Save
+      update: Update
+      preview: Preview
+      cancel: Cancel
+    button:
+      delete: Delete
+    placeholder:
+      text: Body
+      title: Title
+      name: Enter your name
+      comment: Leave a comment
+  activerecord:
+    models:
+      item: Entry
+      comment: Comment
+    attributes:
+      advent_calendar_item:
+        user_name: Name
+        comment: Comment
+      item:
+        title: Title
+  controllers:
+    attachments:
+      create:
+        fail_upload: Upload failed.
+  views:
+    courtesy_title: ""
+    day_format: "Day %{date}"
+    advent_calendar_items:
+      comment: Comment(will be displayed in the calendar)
+      edit:
+        title: "Advent Calendar Day %{date}(%{date}/%{month})"
+      new:
+        title: "Register Advent Calendar Day %{date}(%{date}/%{month})"
+      show:
+        title: "Advent Calendar Day %{date}(%{date}/%{month})"
+        comment: Comment
+        button_edit_advent_calendar_item: Edit Info
+        item_title: Entry
+        button_edit_item: Edit
+        button_create_item: Register
+        item_not_created: You haven't registered yet
+        item_created: You have already registered
+    comments:
+      _comment:
+        confirm_delete: Are you sure to delete comment?
+      _form:
+        title: Add a comment
+        button_create: Comment
+    items:
+      _content:
+        date_short: "%{day}/%{month}"
+        link_edit: Edit this entry
+      _form:
+        item_header_preview: Preview
+      _form_attachment:
+        select_image: Upload an image
+      _navigation:
+        title: "Advent Calendar %{year} Day %{date}"
+      edit:
+        title: Edit Advent Calendar Entry
+      new:
+        title: Register Advent Calendar Entry
+      preview:
+        header_preview: Preview
+    welcome:
+      _detail:
+        button_edit: Edit
+        button_create: Register
+      index:
+        description_title: About Advent Calendar
+        description: Advent calendar is a special calendar used to count or celebrate the days in anticipation of Christmas.
+          Let's enjoy coming Christmas with special entries everyday!

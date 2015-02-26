@@ -1,0 +1,85 @@
+ja:
+  date:
+    abbr_day_names:
+    - 日
+    - 月
+    - 火
+    - 水
+    - 木
+    - 金
+    - 土
+  helpers:
+    submit:
+      create: 登録する
+      submit: 保存する
+      update: 更新する
+      preview: プレビュー
+      cancel: キャンセル
+    button:
+      delete: 削除
+    placeholder:
+      text: 本文を入力してください
+      title: タイトル
+      name: お名前を入力してください
+      comment: コメントを入力してください
+  activerecord:
+    models:
+      item: 記事
+      comment: コメント
+    attributes:
+      advent_calendar_item:
+        user_name: お名前
+        comment: コメント
+      item:
+        title: タイトル
+  controllers:
+    attachments:
+      create:
+        fail_upload: 画像のアップロードに失敗しました
+  views:
+    courtesy_title: さん
+    day_format: "%{date}日目"
+    advent_calendar_items:
+      comment: コメント(カレンダーに表示されます)
+      edit:
+        title: "%{date}日目(%{month}/%{date})のAdventCalendar情報編集"
+      new:
+        title: "%{date}日目(%{month}/%{date})のAdventCalendarに参加登録しますか？"
+      show:
+        title: "%{date}日目(%{month}/%{date})のAdventCalendar情報"
+        comment: コメント
+        button_edit_advent_calendar_item: 名前とコメントを編集する
+        item_title: 記事の登録
+        button_edit_item: 投稿記事を編集する
+        button_create_item: 記事を登録する
+        item_not_created: 記事が登録されていません
+        item_created: 記事が登録されています
+    comments:
+      _comment:
+        confirm_delete: コメントを削除しますか
+      _form:
+        title: コメントを投稿する
+        button_create: 投稿する
+    items:
+      _content:
+        date_short: "%{month}月%{day}日"
+        link_edit: 記事を編集する
+      _form:
+        item_header_preview: プレビュー
+      _form_attachment:
+        select_image: 画像を選択
+      _navigation:
+        title: "この投稿はAdvent Calendar %{year}の%{date}日目の記事です。"
+      edit:
+        title: AdventCalendar記事編集
+      new:
+        title: AdventCalendar記事登録
+      preview:
+        header_preview: プレビュー
+    welcome:
+      _detail:
+        button_edit: 編集
+        button_create: 参加登録
+      index:
+        description_title: AdventCalendarとは
+        description: AdventCalendarとはクリスマスまでの期間をより楽しく過ごすため、12月1日から25日まで1日に1つ、みんなで記事を投稿するイベントです。
