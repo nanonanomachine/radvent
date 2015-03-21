@@ -1,8 +1,8 @@
 radvent
 =======
 
-<a href="http://i.imgur.com/oRqAeo5.png"><img src="http://i.imgur.com/oRqAeo5.png"  width="400px" ></a>
-<a href="http://i.imgur.com/aq5fCL5.png"><img src="http://i.imgur.com/aq5fCL5.png"  width="400px" ></a>
+<a href="http://i.imgur.com/oRqAeo5.png"><img src="http://i.imgur.com/oRqAeo5.png"  width="300px" ></a>
+<a href="http://i.imgur.com/aq5fCL5.png"><img src="http://i.imgur.com/aq5fCL5.png"  width="300px" ></a>
 
 Advent calendar app for programmers like Qiita. An entry is written by markdown. 
 
