@@ -51,3 +51,9 @@ end
 
 また日本語と英語のロケールがサポートされています。
 `config/application.rb`で希望のロケールに設定してください。
+
+Thanks
+--------
+
+* [Kyowichi NISHI](https://github.com/kyow) for giving me many advices
+* [PailMaker](https://github.com/PailMaker) the first proposer
