@@ -6,64 +6,64 @@
 // Description
 //
 .advent-calendar-description{
-	hr{
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
-	p{
-		margin-bottom: 51px;
-		padding-top: 5px
-	}
+  hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  p{
+    margin-bottom: 51px;
+    padding-top: 5px
+  }
 }
 
 //
 // Calendar
 //
 .advent-calendar-calendar{
-	border: none !important;
-	thead{
-		border: none !important;
-		tr{
-			border:none !important;
-			th{
-				border:none !important;
-			}
-		}
-	}
-	tbody{
-		td{
-			border: 1px solid #ddd;
-		    width: 14.2857142857%;
-		    height: 60px;
-		    border-color: #ddd !important;
-		    padding: 0 !important;
-		    .advent-calendar-date{
-				padding: 2px 10px;
-				background-color: #eee;
-				color: #999;
-				font-size: 16px;
-			}
-			.advent-calendar-join{
-				margin: 0 10px 10px;
-			}
-			.advent-calendar-author{
-				padding: 0 10px;
-			}
-			.advent-calendar-entry{
-				padding: 0 10px;
-			}
-		}
-	}
+  border: none !important;
+  thead{
+    border: none !important;
+    tr{
+      border:none !important;
+      th{
+        border:none !important;
+      }
+    }
+  }
+  tbody{
+    td{
+      border: 1px solid #ddd;
+      width: 14.2857142857%;
+      height: 60px;
+      border-color: #ddd !important;
+      padding: 0 !important;
+      .advent-calendar-date{
+        padding: 2px 10px;
+        background-color: #eee;
+        color: #999;
+        font-size: 16px;
+      }
+      .advent-calendar-join{
+        margin: 0 10px 10px;
+      }
+      .advent-calendar-author{
+        padding: 0 10px;
+      }
+      .advent-calendar-entry{
+        padding: 0 10px;
+      }
+    }
+  }
 }
 
 //
 // Footer
 //
 .welcome-footer{
-	padding-top: 20px;
-	padding-bottom: 20px;
-	text-align: center;
-	margin-top: 30px;
-	color: #777;
-	border-top: 1px solid #e5e5e5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  margin-top: 30px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
 }
