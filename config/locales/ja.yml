@@ -32,6 +32,7 @@ ja:
         comment: コメント
       item:
         title: タイトル
+        title_empty: 無題
   controllers:
     attachments:
       create:

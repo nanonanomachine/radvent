@@ -32,6 +32,7 @@ en:
         comment: Comment
       item:
         title: Title
+        title_empty: No title
   controllers:
     attachments:
       create:
