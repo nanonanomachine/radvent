@@ -84,3 +84,6 @@ ja:
       index:
         description_title: AdventCalendarとは
         description: AdventCalendarとはクリスマスまでの期間をより楽しく過ごすため、12月1日から25日まで1日に1つ、みんなで記事を投稿するイベントです。
+  modal:
+    markdown:
+      title: Markdownの書き方

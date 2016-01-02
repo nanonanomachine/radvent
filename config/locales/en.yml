@@ -85,3 +85,6 @@ en:
         description_title: About Advent Calendar
         description: Advent calendar is a special calendar used to count or celebrate the days in anticipation of Christmas.
           Let's enjoy coming Christmas with special entries everyday!
+  modal:
+    markdown:
+      title: Markdown notations
