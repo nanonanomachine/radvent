@@ -69,6 +69,19 @@ ja:
         item_header_preview: プレビュー
       _form_attachment:
         select_image: 画像を選択
+      _form_markdown_help_modal:
+        title: Markdownの書き方
+        output: 表示
+        header: 見出し
+        strong_emphasis: 強調(太字)
+        emphasis: 強調(斜体)
+        unordered_list: リスト
+        ordered_list: 番号付きリスト
+        blockquote: 引用
+        code_block: codeブロック
+        inline_code: 埋め込み
+        link: リンク
+        horizontal_rule: 水平線
       _navigation:
         title: "この投稿はAdvent Calendar %{year}の%{date}日目の記事です。"
       edit:
@@ -84,6 +97,3 @@ ja:
       index:
         description_title: AdventCalendarとは
         description: AdventCalendarとはクリスマスまでの期間をより楽しく過ごすため、12月1日から25日まで1日に1つ、みんなで記事を投稿するイベントです。
-  modal:
-    markdown:
-      title: Markdownの書き方

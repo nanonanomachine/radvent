@@ -4,71 +4,71 @@
       %button.close(type="button" data-dismiss="modal" aria-label="Close")
         %span(aria-hidden="true") &times;
       %h4.modal-title#modal-label
-        = t("modal.markdown.title")
+        = t("views.items._form_markdown_help_modal.title")
     .modal-body
       %table.table.table-bordered
         %thread
           %tr
-            %th 表示
+            %th= t("views.items._form_markdown_help_modal.output")
             %th Markdown
         %tbody
           %tr
             %td
-              %h1 見出し(h1)
-              %h6 見出し(h6)
+              %h1 #{t("views.items._form_markdown_help_modal.header")} (h1)
+              %h6 #{t("views.items._form_markdown_help_modal.header")} (h6)
             %td
-              &= "# 見出し (h1)"
+              &= "# #{t("views.items._form_markdown_help_modal.header")} (h1)"
               %br
-              &= "###### 見出し (h6)"
+              &= "###### #{t("views.items._form_markdown_help_modal.header")} (h6)"
           %tr
             %td
-              %b 強調(太字)
-            %td ** 強調(太字) **
+              %b= t("views.items._form_markdown_help_modal.strong_emphasis")
+            %td ** #{t("views.items._form_markdown_help_modal.strong_emphasis")} **
           %tr
             %td
-              %i 強調(斜体)
-            %td * 強調(斜体) *
+              %i= t("views.items._form_markdown_help_modal.emphasis")
+            %td * #{t("views.items._form_markdown_help_modal.emphasis")} *
           %tr
             %td
               %ul
-                %li リスト
-            %td - リスト
+                %li= t("views.items._form_markdown_help_modal.unordered_list")
+                %td - #{t("views.items._form_markdown_help_modal.unordered_list")}
           %tr
             %td
               %ol
-                %li 番号付きリスト
-            %td 1. 番号付きリスト
+                %li= t("views.items._form_markdown_help_modal.ordered_list")
+            %td 1. #{t("views.items._form_markdown_help_modal.ordered_list")}
           %tr
             %td
-              %blockquote 引用
-            %td > 引用
+              %blockquote= t("views.items._form_markdown_help_modal.blockquote")
+            %td > #{t("views.items._form_markdown_help_modal.blockquote")}
           %tr
             %td
-              %pre codeブロック
+              %pre= t("views.items._form_markdown_help_modal.code_block")
             %td
               ```
               %br
-              codeブロック
+              = t("views.items._form_markdown_help_modal.code_block")
               %br
               ```
           %tr
             %td
-              埋め込み
+              = t("views.items._form_markdown_help_modal.inline_code")
               %code code
             %td
-              埋め込み
+              = t("views.items._form_markdown_help_modal.inline_code")
               `code`
           %tr
             %td
-              %a{:href => "http://example.org/"} リンク
+              %a{:href => "http://example.org/"} #{t("views.items._form_markdown_help_modal.link")}
             %td
-              [リンク](http://example.org/)
+              [#{t("views.items._form_markdown_help_modal.link")}](http://example.org/)
           %tr
             %td
-              (水平線)
+              = t("views.items._form_markdown_help_modal.horizontal_rule")
               %hr
             %td
-              (水平線)
+              = t("views.items._form_markdown_help_modal.horizontal_rule")
               %br
               ***
 
