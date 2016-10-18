@@ -1,0 +1,74 @@
+.modal-dialog
+  .modal-content
+    .modal-header
+      %button.close(type="button" data-dismiss="modal" aria-label="Close")
+        %span(aria-hidden="true") &times;
+      %h4.modal-title#modal-label
+        = t("views.items._form_markdown_help_modal.title")
+    .modal-body
+      %table.table.table-bordered
+        %thread
+          %tr
+            %th= t("views.items._form_markdown_help_modal.output")
+            %th Markdown
+        %tbody
+          %tr
+            %td
+              %h1 #{t("views.items._form_markdown_help_modal.header")} (h1)
+              %h6 #{t("views.items._form_markdown_help_modal.header")} (h6)
+            %td
+              &= "# #{t("views.items._form_markdown_help_modal.header")} (h1)"
+              %br
+              &= "###### #{t("views.items._form_markdown_help_modal.header")} (h6)"
+          %tr
+            %td
+              %b= t("views.items._form_markdown_help_modal.strong_emphasis")
+            %td ** #{t("views.items._form_markdown_help_modal.strong_emphasis")} **
+          %tr
+            %td
+              %i= t("views.items._form_markdown_help_modal.emphasis")
+            %td * #{t("views.items._form_markdown_help_modal.emphasis")} *
+          %tr
+            %td
+              %ul
+                %li= t("views.items._form_markdown_help_modal.unordered_list")
+                %td - #{t("views.items._form_markdown_help_modal.unordered_list")}
+          %tr
+            %td
+              %ol
+                %li= t("views.items._form_markdown_help_modal.ordered_list")
+            %td 1. #{t("views.items._form_markdown_help_modal.ordered_list")}
+          %tr
+            %td
+              %blockquote= t("views.items._form_markdown_help_modal.blockquote")
+            %td > #{t("views.items._form_markdown_help_modal.blockquote")}
+          %tr
+            %td
+              %pre= t("views.items._form_markdown_help_modal.code_block")
+            %td
+              ```
+              %br
+              = t("views.items._form_markdown_help_modal.code_block")
+              %br
+              ```
+          %tr
+            %td
+              = t("views.items._form_markdown_help_modal.inline_code")
+              %code code
+            %td
+              = t("views.items._form_markdown_help_modal.inline_code")
+              `code`
+          %tr
+            %td
+              %a{:href => "http://example.org/"} #{t("views.items._form_markdown_help_modal.link")}
+            %td
+              [#{t("views.items._form_markdown_help_modal.link")}](http://example.org/)
+          %tr
+            %td
+              = t("views.items._form_markdown_help_modal.horizontal_rule")
+              %hr
+            %td
+              = t("views.items._form_markdown_help_modal.horizontal_rule")
+              %br
+              ***
+

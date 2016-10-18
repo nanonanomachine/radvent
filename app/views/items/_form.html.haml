@@ -1,3 +1,5 @@
+.modal.fade#markdown-modal(tabindex="-1" role="dialog" aria-labelledby="modal-label")
+  = render "form_markdown_help_modal"
 %div.form-container
   = form_for item do |f|
     %fieldset
@@ -9,7 +11,10 @@
           %div.col-sm-12
             %div.item-container
               %div.item-body
-                %div.item-header.item-body-header Markdown
+                %div.item-header.item-body-header
+                  Markdown
+                  %a{"data-toggle" => "modal", :href => "#markdown-modal", :class => "btn-xs btn-default"}
+                    %span.fa.fa-question
                 %div.item-body-content
                   = f.text_area :body, id: "item-text", placeholder:t("helpers.placeholder.text")
                   = render "form_attachment", attachment: attachment

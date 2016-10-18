@@ -69,6 +69,19 @@ en:
         item_header_preview: Preview
       _form_attachment:
         select_image: Upload an image
+      _form_markdown_help_modal:
+        title: Markdown notations
+        output: Output
+        header: Header
+        strong_emphasis: Strong emphasis(bold)
+        emphasis: Emphasis(italics)
+        unordered_list: Unordered list
+        ordered_list: Ordered list
+        blockquote: Bloockquote
+        code_block: Code block
+        inline_code: inline code
+        link: Link
+        horizontal_rule: Horizontal rule
       _navigation:
         title: "Advent Calendar %{year} Day %{date}"
       edit:
