@@ -1,3 +1,9 @@
+# Vim swap file
+*.sw*
+
+# for Mac
+.DS_Store
+
 *.rbc
 capybara-*.html
 .rspec
@@ -32,3 +38,7 @@ bower.json
 
 # project specific
 /vendor/bundle
+
+# Ignore assets data
+/public/assets/*
+/public/uploads/**/*
